@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
 
 export interface ColorDialogData {
   color: string;

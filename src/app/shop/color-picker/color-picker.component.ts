@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { ColorPickerDialogComponent } from './color-picker-dialog/color-picker-dialog.component';
 
 @Component({

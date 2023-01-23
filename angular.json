@@ -133,5 +133,13 @@
       }
     }
   },
-  "defaultProject": "angular-a11y"
+  "defaultProject": "angular-a11y",
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
+  }
 }

@@ -1,3 +1,4 @@
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,7 +19,7 @@ export class ShopComponent implements OnInit {
   ];
   selectedFillings: string[] = [];
   // TODO: #11. Announce changes with LiveAnnouncer
-  constructor() {}
+  constructor(private liveAnnouncer: LiveAnnouncer) {}
 
   ngOnInit(): void {}
 
@@ -32,6 +33,7 @@ export class ShopComponent implements OnInit {
 
   fauxPurchase(): void {
     let flavor = '';
+    const fakePurchase = `Purchase ${this.quantity} ${flavor}dumplings in the color ${this.color}!`;
 
     // TODO: #7. Create selectable controls with Angular Material
     this.selectedFillings.forEach((filling) => {
@@ -39,5 +41,6 @@ export class ShopComponent implements OnInit {
     });
 
     // TODO: #11. Announce changes with LiveAnnouncer
+    this.liveAnnouncer.announce(fakePurchase);
   }
 }
